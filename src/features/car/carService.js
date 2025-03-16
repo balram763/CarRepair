@@ -10,7 +10,7 @@ const raiseComplaint = async (formData, token) => {
   };
 
   try {
-    const response = await axios.post("/api/user/carservice/", formData, options);
+    const response = await axios.post("https://carrepairbackend.onrender.com/api/user/carservice/", formData, options);
   
     return response.data;
   } catch (error) {
@@ -26,7 +26,7 @@ const fetchComplaints = async (token) => {
     },
   };
 
-  const response = await axios.get("/api/user/carservice", options);
+  const response = await axios.get("https://carrepairbackend.onrender.com/api/user/carservice", options);
   return response.data;
 };
 
@@ -37,7 +37,7 @@ const fetchComplaint = async (id, token) => {
     },
   };
 
-  const response = await axios.get(`/api/user/carservice/${id}`, options);
+  const response = await axios.get(`https://carrepairbackend.onrender.com/api/user/carservice/${id}`, options);
   return response.data;
 };
 
@@ -49,7 +49,7 @@ const updateComplaint = async (id, token) => {
   };
 
   const response = await axios.put(
-    `/api/user/carservice/${id}`,
+    `https://carrepairbackend.onrender.com/api/user/carservice/${id}`,
     { status: "closed" },
     options
   );

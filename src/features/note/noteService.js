@@ -7,7 +7,7 @@ const fetchNotes = async (id, token) => {
     },
   };
 
-  const response = await axios.get(`/api/user/carservice/${id}/note`, options);
+  const response = await axios.get(`https://carrepairbackend.onrender.com/api/user/carservice/${id}/note`, options);
   return response.data;
 };
 
@@ -33,7 +33,7 @@ const addNote = async (formData, token) => {
 
 
     const response = await axios.post(
-      `/api/user/carservice/${formData.id}/note`,
+      `https://carrepairbackend.onrender.com/api/user/carservice/${formData.id}/note`,
       formData,
       options
     );

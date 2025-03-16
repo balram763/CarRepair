@@ -6,7 +6,7 @@ const fetchUsers = async (token) => {
       authorization: `Bearer ${token}`,
     },
   };
-  const response = await axios.get("/api/admin/users", options);
+  const response = await axios.get("https://carrepairbackend.onrender.com/api/admin/users", options);
   return response.data;
 };
 
@@ -18,7 +18,7 @@ const fetchCars = async (token) => {
       authorization: `Bearer ${token}`,
     },
   };
-  const response = await axios.get("/api/admin/cars", options);
+  const response = await axios.get("https://carrepairbackend.onrender.com/api/admin/cars", options);
   return response.data;
   
 };
@@ -31,7 +31,7 @@ const fetchUserDetail = async (id, token) => {
       },
     };
 
-    const response = await axios.get(`/api/admin/user/${id}`, options);
+    const response = await axios.get(`https://carrepairbackend.onrender.com/api/admin/user/${id}`, options);
     return response.data;
   } catch (error) {
     toast.error("Something went wrong..")
@@ -47,7 +47,7 @@ const fetchNotes = async (token) => {
       authorization: `Bearer ${token}`,
     },
   };
-  const response = await axios.get("/api/admin/notes", options);
+  const response = await axios.get("https://carrepairbackend.onrender.com/api/admin/notes", options);
   return response.data;
 };
 
